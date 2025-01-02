@@ -1,10 +1,10 @@
-package com.bluemercury.blue_mercury;
+package com.socialsync.socialsync;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BlueMercuryApplicationTests {
+class SocialsyncApplicationTests {
 
 	@Test
 	void contextLoads() {

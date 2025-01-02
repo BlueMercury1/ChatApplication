@@ -1,13 +1,13 @@
-package com.bluemercury.blue_mercury;
+package com.socialsync.socialsync;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BlueMercuryApplication {
+public class SocialsyncApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BlueMercuryApplication.class, args);
+		SpringApplication.run(SocialsyncApplication.class, args);
 	}
 
 }
