@@ -28,6 +28,7 @@ public class ShopkeeperController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody ShopKeeperDto dto) {
+        System.err.println(dto);
         ShopKeeper shopKeeperByEmail = shopkeeperService.getShopKeeperByEmail(dto.getShopKeeperEmail());
         System.err.println(shopKeeperByEmail);
         if (Objects.isNull(shopKeeperByEmail)) {

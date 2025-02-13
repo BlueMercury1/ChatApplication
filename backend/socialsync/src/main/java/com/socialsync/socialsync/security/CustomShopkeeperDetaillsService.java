@@ -1,5 +1,7 @@
 package com.socialsync.socialsync.security;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -17,9 +19,9 @@ public class CustomShopkeeperDetaillsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        ShopKeeper shopKeeper = shopKeeperRepository.findByShopKeeperEmail(username);
+        Optional<ShopKeeper> shopKeeper = shopKeeperRepository.findByShopKeeperEmail(username);
         System.err.println(shopKeeper);
-        return shopKeeper;
+        return shopKeeper.get();
     }
 
 }

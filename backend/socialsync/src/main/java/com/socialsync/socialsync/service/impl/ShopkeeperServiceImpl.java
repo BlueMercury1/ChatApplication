@@ -47,8 +47,9 @@ public class ShopkeeperServiceImpl implements ShopkeeperService {
 
     @Override
     public ShopKeeper getShopKeeperByEmail(String email) {
-        return keeperRepository.findById(email)
+        return keeperRepository.findByShopKeeperEmail(email)
                 .orElseThrow(() -> new ShopKeeperNotFoundException("ShopKeeper not found with " + email));
+
     }
 
 }
